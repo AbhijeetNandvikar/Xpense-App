@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Expense App</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+    />
+
+    <script
+			defer
+			src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+			integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+			crossorigin="anonymous"
+		>
+    </script>
+    <style>
+        .list-group-item.d-flex.justify-content-between:hover{
+            box-shadow : #666 2px 2px 10px ;
+            transition-duration: 50ms ;
+            margin-bottom: 5px ;
+        }
+
+    </style>
+		
+    
+</head>
+<body>
+    <div>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Xpense App</span>
+        <span class="navbar-brand mb-0 h1" id="headingTotal"></span>
+    </nav>
+    </div>
+<div class="container-fluid bg-light" style="min-height: 100vh;">
+        <div class="container" style=" padding-top: 2rem; ">
+        <div class="jumbotron mt-4" style="box-shadow: #666 3px 3px 15px;">
+            <div class="input-group mb-3">
+                <input
+                    type="text"
+                    class="form-control"
+                    id="inputAmount"
+                    placeholder="Amount spent"
+                    aria-label="Amount spent"
+                    aria-describedby="spent in rupee"
+                />
+                <div class="input-group-append">
+                    <span class="input-group-text" id="spent in rupee">₹</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="spent at">@</span>
+                </div>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="inputDesc"
+                    placeholder="spent On"
+                    aria-label="spent On"
+                    aria-describedby="spent at"
+                />
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="button" id="btnAddExpense">Add</button>
+                </div>
+            </div>
+        </div>
+    <ul class="list-group" id="expenseTable">  </ul>
+
+    </div>
+
+    
+
+    
+        
+</div>
+    
+
+
+<script src="xpenseScript.js">
+    
+</script>
+</body>
+</html>
